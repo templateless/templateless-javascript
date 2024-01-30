@@ -1,0 +1,4 @@
+.yarn/**/* binary
+dist/**/* binary
+package-lock.json binary
+yarn.lock binary
