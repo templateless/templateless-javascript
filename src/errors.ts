@@ -2,6 +2,7 @@ export enum BadRequestCode {
   AccountQuotaExceeded = 200,
   ProviderKeyMissing = 300,
   ProviderKeyInvalid = 301,
+  EmailNoContent = 400,
 }
 
 export class UnauthorizedError extends Error {
