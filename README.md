@@ -65,6 +65,12 @@ Note:
 1. Get your **free API key** here: <https://app.templateless.com> ✨
 1. There are more JavaScript examples in the [examples](examples) folder
 
+  ```bash
+  TEMPLATELESS_API_KEY=<Your API Key> \
+    TEMPLATELESS_EMAIL_ADDRESS=<Your Own Email Address> \
+    node examples/simple
+  ```
+
 ## 🤝 Contributing
 
 - Contributions are more than welcome <3

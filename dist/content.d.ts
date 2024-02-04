@@ -1,5 +1,5 @@
 import { Component, SocialItem } from './components';
-import { Result, Header, Footer } from '.';
+import { Header, Footer } from '.';
 export declare enum Theme {
     Unstyled = "UNSTYLED",
     Simple = "SIMPLE"
@@ -29,7 +29,7 @@ declare class ContentBuilder {
     socials(data: SocialItem[]): this;
     text(text: string): this;
     viewInBrowser(text: string): this;
-    build(): Result<Content>;
+    build(): Content;
     private push;
 }
 export {};

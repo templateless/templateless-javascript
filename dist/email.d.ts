@@ -1,4 +1,4 @@
-import { EmailAddress, Result } from '.';
+import { EmailAddress } from '.';
 interface EmailOptions {
     deleteAfter?: number;
 }
@@ -24,6 +24,6 @@ declare class EmailBuilder {
     subject(subject: string): this;
     content(content: Content): this;
     deleteAfter(seconds: number): this;
-    build(): Result<Email>;
+    build(): Email;
 }
 export {};

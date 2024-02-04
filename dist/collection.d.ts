@@ -1,5 +1,4 @@
 import { Component, SocialItem } from './components';
-import { Result } from '.';
 export declare class Collection {
     components: Component[];
     constructor(builder: CollectionBuilder);
@@ -15,7 +14,7 @@ declare class CollectionBuilder {
     socials(data: SocialItem[]): this;
     text(text: string): this;
     viewInBrowser(text: string): this;
-    build(): Result<Collection>;
+    build(): Collection;
     private push;
 }
 export {};

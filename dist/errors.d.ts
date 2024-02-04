@@ -26,4 +26,3 @@ export declare class UnknownError extends Error {
     constructor();
 }
 export type TemplatelessError = UnauthorizedError | ForbiddenError | InvalidParameterError | BadRequestError | UnavailableError | UnknownError;
-export type Result<T> = T | TemplatelessError;

@@ -1,4 +1,4 @@
-import { EmailAddress, Result } from '.'
+import { EmailAddress } from '.'
 
 interface EmailOptions {
   deleteAfter?: number
@@ -66,7 +66,7 @@ class EmailBuilder {
     return this
   }
 
-  build(): Result<Email> {
+  build(): Email {
     return new Email(this)
   }
 }

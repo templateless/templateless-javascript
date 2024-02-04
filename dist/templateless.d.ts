@@ -1,4 +1,4 @@
-import { Email, Result, ObjectId } from '.';
+import { Email, ObjectId } from '.';
 export interface EmailResponse {
     emails: ObjectId[];
 }
@@ -7,6 +7,6 @@ export declare class Templateless {
     private _domain;
     constructor(apiKey: string);
     domain(domain: string): this;
-    send(email: Email): Promise<Result<ObjectId[]>>;
-    sendMany(emails: Email[]): Promise<Result<ObjectId[]>>;
+    send(email: Email): Promise<ObjectId[]>;
+    sendMany(emails: Email[]): Promise<ObjectId[]>;
 }

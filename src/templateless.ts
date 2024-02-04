@@ -3,7 +3,6 @@ import axios from 'axios'
 import pkg from '../package.json'
 import {
   Email,
-  Result,
   ObjectId,
   UnauthorizedError,
   ForbiddenError,
@@ -31,11 +30,11 @@ export class Templateless {
     return this
   }
 
-  async send(email: Email): Promise<Result<ObjectId[]>> {
+  async send(email: Email): Promise<ObjectId[]> {
     return this.sendMany([email])
   }
 
-  async sendMany(emails: Email[]): Promise<Result<ObjectId[]>> {
+  async sendMany(emails: Email[]): Promise<ObjectId[]> {
     try {
       const response = await axios.post(
         `${this._domain}/v1/emails`,
@@ -68,7 +67,7 @@ export class Templateless {
           throw new UnknownError()
       }
     } catch (error) {
-      return new UnknownError()
+      throw new UnknownError()
     }
   }
 }

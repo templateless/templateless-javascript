@@ -9,7 +9,7 @@ import {
   ViewInBrowser,
   SocialItem,
 } from './components'
-import { Result, Header, Footer } from '.'
+import { Header, Footer } from '.'
 
 export enum Theme {
   Unstyled = 'UNSTYLED',
@@ -100,7 +100,7 @@ class ContentBuilder {
     return this.push(new ViewInBrowser(text))
   }
 
-  build(): Result<Content> {
+  build(): Content {
     return new Content(this)
   }
 

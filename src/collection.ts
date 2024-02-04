@@ -9,7 +9,6 @@ import {
   ViewInBrowser,
   SocialItem,
 } from './components'
-import { Result } from '.'
 
 export class Collection {
   components: Component[]
@@ -66,7 +65,7 @@ class CollectionBuilder {
     return this.push(new ViewInBrowser(text))
   }
 
-  build(): Result<Collection> {
+  build(): Collection {
     return new Collection(this)
   }
 

@@ -62,5 +62,3 @@ export type TemplatelessError =
   | BadRequestError
   | UnavailableError
   | UnknownError
-
-export type Result<T> = T | TemplatelessError
