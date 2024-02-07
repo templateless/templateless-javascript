@@ -22,7 +22,7 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint '**/*.{js,ts,json}' --fix",
-    "format": "prettier --write 'src/**/*.{js,ts,json}'",
+    "format": "prettier --write '**/*.{js,ts,json}'",
     "test": "jest --passWithNoTests",
     "build": "rollup -c --bundleConfigAsCjs",
     "all": "npm run format && npm run lint && npm test && npm run build"
