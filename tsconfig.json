@@ -13,7 +13,7 @@
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules/", "dist/", "**/*.test.ts"],
+  "exclude": ["node_modules/", "dist/", "**/*.test.ts"]
 }
