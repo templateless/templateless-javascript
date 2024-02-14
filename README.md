@@ -1,12 +1,28 @@
-# Templateless JavaScript
+<h1 align="center">
+  <a href="https://templateless.com/">
+    <img src="templateless.webp" alt="Templateless" width="450px">
+  </a>
+  <br />
+</h1>
+
+<p align="center">
+  <b>Ship faster by treating email as code 🚀</b> <br />
+</p>
+
+<h4 align="center">
+  <a href="https://templateless.com/">Website</a> &bull;
+  <a href="https://app.templateless.com/">Get Your API Key</a> &bull;
+  <a href="https://twitter.com/templateless">Twitter</a>
+</h4>
+
+---
 
 [![npm version](https://img.shields.io/npm/v/templateless-js.svg)](https://www.npmjs.com/package/templateless-js)
 [![Github Actions](https://img.shields.io/github/actions/workflow/status/templateless/templateless-javascript/tests.yml)](https://github.com/templateless/templateless-javascript/actions)
 [![Downloads](https://img.shields.io/npm/dm/templateless-js)](https://www.npmjs.com/package/templateless-js)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/Templateless)](https://twitter.com/templateless)
 
-## What is Templateless?
-
-[Templateless](https://templateless.com) lets you generate and send transactional emails quickly and easily so you can ship faster 🚀
+[Templateless](https://templateless.com) lets you generate and send transactional emails quickly and easily so you can focus on building your product.
 
 ## ✨ Features
 
@@ -60,7 +76,10 @@ import { Content, Email, EmailAddress, Templateless } from 'templateless-js'
 })()
 ```
 
-Note:
+> **Note**
+> 🚧 **This SDK is not stable yet.** The API might change as more features are added. Please pay attention to the [CHANGELOG](CHANGELOG.md) for breaking changes.
+
+Examples:
 
 1. Get your **free API key** here: <https://app.templateless.com> ✨
 1. There are more JavaScript examples in the [examples](examples) folder
