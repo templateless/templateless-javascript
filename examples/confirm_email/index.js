@@ -28,7 +28,7 @@ const sendEmail = async () => {
   const footer = Footer.builder()
     .socials([
       new SocialItem(Service.Twitter, 'ExampleApp'),
-      new SocialItem(Service.Github, 'ExampleApp'),
+      new SocialItem(Service.GitHub, 'ExampleApp'),
     ])
     .link('Unsubscribe', 'https://example.com/unsubscribe?id=123')
     .build()

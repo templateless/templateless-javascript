@@ -3,9 +3,20 @@ import { ComponentId } from '../common'
 export enum Service {
   Website = 'WEBSITE',
   Email = 'EMAIL',
+  Phone = 'PHONE',
+  Facebook = 'FACEBOOK',
+  YouTube = 'YOUTUBE',
   Twitter = 'TWITTER',
   X = 'X',
-  Github = 'GITHUB',
+  GitHub = 'GITHUB',
+  Instagram = 'INSTAGRAM',
+  LinkedIn = 'LINKEDIN',
+  Slack = 'SLACK',
+  Discord = 'DISCORD',
+  TikTok = 'TIKTOK',
+  Snapchat = 'SNAPCHAT',
+  Threads = 'THREADS',
+  Telegram = 'TELEGRAM',
 }
 
 export class Item {
