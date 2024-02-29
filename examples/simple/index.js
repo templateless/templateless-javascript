@@ -2,13 +2,13 @@ import 'dotenv/config'
 import { Content, Email, EmailAddress, Templateless } from 'templateless-js'
 
 const sendEmail = async () => {
-  let api_key = process.env.TEMPLATELESS_API_KEY
+  const api_key = process.env.TEMPLATELESS_API_KEY
   if (!api_key) {
     console.error('Set TEMPLATELESS_API_KEY to your Templateless API key')
     return
   }
 
-  let email_address = process.env.TEMPLATELESS_EMAIL_ADDRESS
+  const email_address = process.env.TEMPLATELESS_EMAIL_ADDRESS
   if (!email_address) {
     console.error('Set TEMPLATELESS_EMAIL_ADDRESS to your own email address')
     return

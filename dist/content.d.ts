@@ -28,7 +28,7 @@ declare class ContentBuilder {
     otp(text: string): this;
     socials(data: SocialItem[]): this;
     text(text: string): this;
-    viewInBrowser(text: string): this;
+    viewInBrowser(text?: string): this;
     build(): Content;
     private push;
 }

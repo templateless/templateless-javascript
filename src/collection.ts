@@ -40,9 +40,7 @@ class CollectionBuilder {
     height?: number,
     alt?: string,
   ): this {
-    return this.push(
-      new Image(src, alt ?? '', width ?? 0, height ?? 0, url ?? ''),
-    )
+    return this.push(new Image(src, alt, width, height, url))
   }
 
   link(text: string, url: string): this {
@@ -61,7 +59,7 @@ class CollectionBuilder {
     return this.push(new Text(text))
   }
 
-  viewInBrowser(text: string): this {
+  viewInBrowser(text?: string): this {
     return this.push(new ViewInBrowser(text))
   }
 

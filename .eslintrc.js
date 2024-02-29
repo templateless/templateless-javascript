@@ -22,6 +22,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'node/no-unsupported-features/es-builtins': 'off',
     'unicorn/prefer-spread': 'off',
+    'prefer-const': 'error',
   },
   ignorePatterns: ['*.mjs', '*.cjs'],
 }

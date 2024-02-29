@@ -1,5 +1,11 @@
 # CHANGELOG
 
+**v0.1.0-alpha.3:**
+- `README.md` cleanup (listing of components)
+- `Image` component now requires only `src`; the other params are optional
+- `ViewInBrowser` component has changed: text is optional
+- npm updates
+
 **v0.1.0-alpha.2:**
 - Introduced `CHANGELOG.md`
 - npm updates
