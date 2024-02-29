@@ -90,7 +90,7 @@ const sendEmail = async () => {
 sendEmail()
 ```
 
-There are more C# examples in the [examples](examples) folder ✨
+There are more examples in the [examples](examples) folder ✨
 
 > [!NOTE]
 > 🚧 **The SDK is not stable yet.** This API might change as more features are added. Please watch the repo for the changes in the [CHANGELOG](CHANGELOG.md).
