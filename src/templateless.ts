@@ -12,8 +12,14 @@ import {
   UnknownError,
 } from '.'
 
+export interface EmailResponsePreviews {
+  email: string
+  preview: string
+}
+
 export interface EmailResponse {
   emails: ObjectId[]
+  previews?: EmailResponsePreviews[]
 }
 
 export class Templateless {
@@ -62,6 +68,15 @@ export class Templateless {
           throw new UnavailableError()
         case 200:
           const emailResponse = response.data as EmailResponse
+
+          if (emailResponse.previews) {
+            for (const preview of emailResponse.previews) {
+              console.log(
+                `Templateless [TEST MODE]: Emailed ${preview.email}, preview: https://tmpl.sh/${preview.preview}`,
+              )
+            }
+          }
+
           return emailResponse.emails
         default:
           throw new UnknownError()

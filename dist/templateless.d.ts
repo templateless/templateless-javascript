@@ -1,6 +1,11 @@
 import { Email, ObjectId } from '.';
+export interface EmailResponsePreviews {
+    email: string;
+    preview: string;
+}
 export interface EmailResponse {
     emails: ObjectId[];
+    previews?: EmailResponsePreviews[];
 }
 export declare class Templateless {
     private _apiKey;

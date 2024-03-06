@@ -1,5 +1,10 @@
 # CHANGELOG
 
+**v0.1.0-alpha.4:**
+- `README.md`: notice about test mode
+- Support for test mode logging
+- npm updates
+
 **v0.1.0-alpha.3:**
 - `README.md` cleanup (listing of components)
 - `Image` component now requires only `src`; the other params are optional
