@@ -1,4 +1,4 @@
-import { Component, SocialItem } from './components';
+import { Component, SocialItem, StoreBadgeItem, SignatureFont } from './components';
 import { Header, Footer } from '.';
 export declare enum Theme {
     Unstyled = "UNSTYLED",
@@ -29,6 +29,10 @@ declare class ContentBuilder {
     socials(data: SocialItem[]): this;
     text(text: string): this;
     viewInBrowser(text?: string): this;
+    qrCode(url: string): this;
+    storeBadges(data: StoreBadgeItem[]): this;
+    signature(text: string, font?: SignatureFont): this;
+    component(c: Component): this;
     build(): Content;
     private push;
 }

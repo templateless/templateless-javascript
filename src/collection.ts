@@ -8,6 +8,11 @@ import {
   Text,
   ViewInBrowser,
   SocialItem,
+  QrCode,
+  StoreBadges,
+  StoreBadgeItem,
+  Signature,
+  SignatureFont,
 } from './components'
 
 export class Collection {
@@ -61,6 +66,22 @@ class CollectionBuilder {
 
   viewInBrowser(text?: string): this {
     return this.push(new ViewInBrowser(text))
+  }
+
+  qrCode(url: string): this {
+    return this.push(QrCode.url(url))
+  }
+
+  storeBadges(data: StoreBadgeItem[]): this {
+    return this.push(new StoreBadges(data))
+  }
+
+  signature(text: string, font?: SignatureFont): this {
+    return this.push(new Signature(text, font))
+  }
+
+  component(c: Component): this {
+    return this.push(c)
   }
 
   build(): Collection {

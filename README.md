@@ -82,9 +82,7 @@ const sendEmail = async () => {
     .build()
 
   const templateless = new Templateless('<YOUR_API_KEY>')
-  const result = await templateless.send(email)
-
-  console.log(result)
+  await templateless.send(email)
 }
 
 sendEmail()
@@ -145,9 +143,9 @@ Text component allow you to insert a paragraph. Each paragraph supports basic ma
 
 ```javascript
 Content.builder()
-    .text("## Thank you for signing up")
-    .text("Please **verify your email** by [clicking here](https://example.com/confirm?token=XYZ)")
-    .build()
+  .text("## Thank you for signing up")
+  .text("Please **verify your email** by [clicking here](https://example.com/confirm?token=XYZ)")
+  .build()
 ```
 
 </details>
@@ -157,9 +155,8 @@ Link component adds an anchor tag. This is the same as a text component with the
 
 ```javascript
 Content.builder()
-    .link("Confirm Email", "https://example.com/confirm?token=XYZ") // or...
-    .text("[Confirm Email](https://example.com/confirm?token=XYZ)")
-    .build()
+  .link("Confirm Email", "https://example.com/confirm?token=XYZ")
+  .build()
 ```
 
 </details>
@@ -169,8 +166,8 @@ Button can also be used as a call to action. Button color is set via your dashbo
 
 ```javascript
 Content.builder()
-    .button("Confirm Email", "https://example.com/confirm?token=XYZ")
-    .build()
+  .button("Confirm Email", "https://example.com/confirm?token=XYZ")
+  .build()
 ```
 
 </details>
@@ -180,14 +177,14 @@ Image component will link to an image within your email. Keep in mind that a lot
 
 ```javascript
 Content.builder()
-    .image(
-        "https://placekitten.com/300/200",  // where the image is hosted
-        "https://example.com",              // [optional] link url, if you want it to be clickable
-        300,                                // [optional] width
-        200,                                // [optional] height
-        "Alt text"                          // [optional] alternate text
-    )
-    .build()
+  .image(
+    "https://placekitten.com/300/200",  // where the image is hosted
+    "https://example.com",              // [optional] link url, if you want it to be clickable
+    300,                                // [optional] width
+    200,                                // [optional] height
+    "Alt text"                          // [optional] alternate text
+  )
+  .build()
 ```
 
 Only the `src` parameter is required; everything else is optional.
@@ -216,9 +213,9 @@ OTP component is designed for showing temporary passwords and reset codes.
 
 ```javascript
 Content.builder()
-    .text("Here's your **temporary login code**:")
-    .otp("XY78-2BT0-YFNB-ALW9")
-    .build()
+  .text("Here's your **temporary login code**:")
+  .otp("XY78-2BT0-YFNB-ALW9")
+  .build()
 ```
 
 </details>
@@ -230,25 +227,27 @@ These are all the supported platforms:
 
 ```javascript
 Content.builder()
-    .socials([
-      new SocialItem(Service.Website, 'https://example.com'),
-      new SocialItem(Service.Email, 'username@example.com'),
-      new SocialItem(Service.Phone, '123-456-7890'), // `tel:` link
-      new SocialItem(Service.Facebook, 'ExampleApp'),
-      new SocialItem(Service.YouTube, 'ChannelID'),
-      new SocialItem(Service.Twitter, 'ExampleApp'),
-      new SocialItem(Service.X, 'ExampleApp'),
-      new SocialItem(Service.GitHub, 'ExampleApp'),
-      new SocialItem(Service.Instagram, 'ExampleApp'),
-      new SocialItem(Service.LinkedIn, 'ExampleApp'),
-      new SocialItem(Service.Slack, 'Org'),
-      new SocialItem(Service.Discord, 'ExampleApp'),
-      new SocialItem(Service.TikTok, 'ExampleApp'),
-      new SocialItem(Service.Snapchat, 'ExampleApp'),
-      new SocialItem(Service.Threads, 'ExampleApp'),
-      new SocialItem(Service.Telegram, 'ExampleApp'),
-    ])
-    .build()
+  .socials([
+    new SocialItem(Service.Website, 'https://example.com'),
+    new SocialItem(Service.Email, 'username@example.com'),
+    new SocialItem(Service.Phone, '123-456-7890'), // `tel:` link
+    new SocialItem(Service.Facebook, 'Username'),
+    new SocialItem(Service.YouTube, 'ChannelID'),
+    new SocialItem(Service.Twitter, 'Username'),
+    new SocialItem(Service.X, 'Username'),
+    new SocialItem(Service.GitHub, 'Username'),
+    new SocialItem(Service.Instagram, 'Username'),
+    new SocialItem(Service.LinkedIn, 'Username'),
+    new SocialItem(Service.Slack, 'Org'),
+    new SocialItem(Service.Discord, 'Username'),
+    new SocialItem(Service.TikTok, 'Username'),
+    new SocialItem(Service.Snapchat, 'Username'),
+    new SocialItem(Service.Threads, 'Username'),
+    new SocialItem(Service.Telegram, 'Username'),
+    new SocialItem(Service.Mastodon, '@Username@example.com'),
+    new SocialItem(Service.Rss, 'https://example.com/blog'),
+  ])
+  .build()
 ```
 
 </details>
@@ -265,6 +264,92 @@ Content.builder()
     .viewInBrowser("Read Email in Browser")
     .build()
 ```
+
+</details>
+<details><summary>Store Badges</summary>
+
+Link to your mobile apps via store badges:
+
+```javascript
+Content.builder()
+  .storeBadges([
+    new StoreBadgeItem(StoreBadge.AppStore, "https://apps.apple.com/us/app/example/id1234567890"),
+    new StoreBadgeItem(StoreBadge.GooglePlay, "https://play.google.com/store/apps/details?id=com.example"),
+    new StoreBadgeItem(StoreBadge.MicrosoftStore, "https://apps.microsoft.com/detail/example"),
+  ])
+  .build()
+```
+
+</details>
+<details><summary>QR Code</summary>
+
+You can also generate QR codes on the fly. They will be shown as images inside the email.
+
+Here are all the supported data types:
+
+```javascript
+// url
+Content.builder()
+  .qrCode("https://example.com")
+  .build()
+
+// email
+Content.builder()
+  .component(QrCode.email("user@example.com"))
+  .build()
+
+// phone
+Content.builder()
+  .component(QrCode.phone("123-456-7890"))
+  .build()
+
+// sms / text message
+Content.builder()
+  .component(QrCode.sms("123-456-7890"))
+  .build()
+
+// geo coordinates
+Content.builder()
+  .component(QrCode.coordinates(37.773972, -122.431297))
+  .build()
+
+// crypto address (for now only Bitcoin and Ethereum are supported)
+Content.builder()
+  .component(QrCode.cryptocurrencyAddress(Cryptocurrency.Bitcoin, "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"))
+  .build()
+
+// you can also encode any binary data
+Content.builder()
+  .component(new QrCode(new Uint8Array([1, 2, 3])))
+  .build()
+```
+
+</details>
+<details><summary>Signature</summary>
+
+Generated signatures can be added to your emails to give a bit of a personal touch. This will embed an image with your custom text using one of several available fonts:
+
+```javascript
+// signature with a default font
+Content.builder()
+  .signature("John Smith")
+  .build()
+
+// signature with a custom font
+Content.builder()
+  .signature("John Smith", SignatureFont.ReenieBeanie)
+  .build()
+```
+
+These are the available fonts:
+
+- `SignatureFont.ReenieBeanie` [preview →](https://fonts.google.com/specimen/Reenie+Beanie)
+- `SignatureFont.MeowScript` [preview →](https://fonts.google.com/specimen/Meow+Script)
+- `SignatureFont.Caveat` [preview →](https://fonts.google.com/specimen/Caveat)
+- `SignatureFont.Zeyada` [preview →](https://fonts.google.com/specimen/Zeyada)
+- `SignatureFont.Petemoss` [preview →](https://fonts.google.com/specimen/Petemoss)
+
+Signature should not exceed 64 characters. Only alphanumeric characters and most common symbols are allowed.
 
 </details>
 

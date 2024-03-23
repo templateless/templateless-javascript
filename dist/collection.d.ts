@@ -1,4 +1,4 @@
-import { Component, SocialItem } from './components';
+import { Component, SocialItem, StoreBadgeItem, SignatureFont } from './components';
 export declare class Collection {
     components: Component[];
     constructor(builder: CollectionBuilder);
@@ -14,6 +14,10 @@ declare class CollectionBuilder {
     socials(data: SocialItem[]): this;
     text(text: string): this;
     viewInBrowser(text?: string): this;
+    qrCode(url: string): this;
+    storeBadges(data: StoreBadgeItem[]): this;
+    signature(text: string, font?: SignatureFont): this;
+    component(c: Component): this;
     build(): Collection;
     private push;
 }

@@ -1,4 +1,4 @@
-import { ComponentId } from '../common'
+import { Component, ComponentId } from '../common'
 
 export class Button implements Component {
   id: ComponentId
@@ -11,5 +11,3 @@ export class Button implements Component {
     this.url = url
   }
 }
-
-interface Component {}

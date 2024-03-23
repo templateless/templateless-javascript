@@ -6,5 +6,10 @@ export declare enum ComponentId {
     PoweredBy = "POWERED_BY",
     Socials = "SOCIALS",
     Text = "TEXT",
-    ViewInBrowser = "VIEW_IN_BROWSER"
+    ViewInBrowser = "VIEW_IN_BROWSER",
+    StoreBadges = "STORE_BADGES",
+    QrCode = "QR_CODE",
+    Signature = "SIGNATURE"
+}
+export interface Component {
 }

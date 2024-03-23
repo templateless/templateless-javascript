@@ -1,4 +1,4 @@
-import { ComponentId } from '../common'
+import { Component, ComponentId } from '../common'
 
 export class Image implements Component {
   id: ComponentId
@@ -23,5 +23,3 @@ export class Image implements Component {
     this.url = url
   }
 }
-
-interface Component {}

@@ -1,4 +1,4 @@
-import { ComponentId } from '../common'
+import { Component, ComponentId } from '../common'
 
 export enum Service {
   Website = 'WEBSITE',
@@ -17,14 +17,16 @@ export enum Service {
   Snapchat = 'SNAPCHAT',
   Threads = 'THREADS',
   Telegram = 'TELEGRAM',
+  Mastodon = 'MASTODON',
+  Rss = 'RSS',
 }
 
 export class Item {
-  service: Service
+  key: Service
   value: string
 
   constructor(service: Service, value: string) {
-    this.service = service
+    this.key = service
     this.value = value
   }
 }
@@ -38,5 +40,3 @@ export class Socials implements Component {
     this.data = data
   }
 }
-
-interface Component {}

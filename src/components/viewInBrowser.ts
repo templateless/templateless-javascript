@@ -1,4 +1,4 @@
-import { ComponentId } from '../common'
+import { Component, ComponentId } from '../common'
 
 export class ViewInBrowser implements Component {
   id: ComponentId
@@ -9,5 +9,3 @@ export class ViewInBrowser implements Component {
     this.text = text
   }
 }
-
-interface Component {}
