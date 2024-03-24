@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.1.0-alpha.6:
+
+### Bug fixes
+- Fixed: Custom signature fonts had the wrong enums
+
 ## v0.1.0-alpha.5:
 
 ### New Features

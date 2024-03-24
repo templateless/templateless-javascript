@@ -1,11 +1,11 @@
 import { Component, ComponentId } from '../common'
 
 export enum Font {
-  ReenieBeanie = 1,
-  MeowScript = 2,
-  Caveat = 3,
-  Zeyada = 4,
-  Petemoss = 5,
+  ReenieBeanie = 'REENIE_BEANIE',
+  MeowScript = 'MEOW_SCRIPT',
+  Caveat = 'CAVEAT',
+  Zeyada = 'ZEYADA',
+  Petemoss = 'PETEMOSS',
 }
 
 export class Signature implements Component {
